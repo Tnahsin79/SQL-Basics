@@ -1,0 +1,10 @@
+Exercise 8 — Tasks
+1. Find the name and role of all employees who have not been assigned to a building.
+Solution => SELECT Name,Role FROM employees
+            where building IS NULL;
+
+2. Find the names of the buildings that hold no employees.
+Solution => SELECT * FROM Buildings
+            LEFT JOIN Employees
+            ON Buildings.Building_name=Employees.Building
+            where Role IS NULL;

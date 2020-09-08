@@ -1,0 +1,13 @@
+Exercise 10 — Tasks
+1. Find the longest time that an employee has been at the studio.
+Solution => SELECT MAX(Years_employed) FROM employees;
+
+2. For each role, find the average number of years employed by employees in that role.
+Solution => SELECT Role, AVG(years_employed) as Average_employed_years
+            FROM Employees
+            GROUP BY Role;
+
+3. Find the total number of employee years worked in each building.
+Solution => SELECT Building,SUM(Years_employed) AS Total_employed_Years
+            FROM Employees
+            GROUP BY Building;

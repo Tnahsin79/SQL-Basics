@@ -1,0 +1,12 @@
+Exercise 11 — Tasks
+1. Find the number of Artists in the studio (without a HAVING clause).
+Solution => SELECT COUNT() AS Number_of_artists FROM employees
+            where Role="Artist";
+
+2. Find the number of Employees of each role in the studio.
+Solution => SELECT Role,COUNT() AS Number_of_artists FROM employees
+            GROUP BY Role;
+
+3. Find the total number of years employed by all Engineers.
+Solution => SELECT SUM(Years_employed) AS Number_of_artists FROM employees
+            Where Role="Engineer";
